@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  header
+    h1 Important Bitcoin Information
+    h2 🍔🍔🍔🍔🍔 ヾ(＠⌒ー⌒＠)ノ 🍔🍔🍔🍔🍔
+
+  main
+    p.pull-right.text-right.text-muted 1 Big Mac = £!{bigmac_price}
+      br
+      | 1 Bitcoin = £!{bitcoin_price}
+    h2 You can buy !{bigmacs} Big Macs with 1 Bitcoin
+    hr
+    .loadsa-burgers(data-amount=bigmacs)
+    //-  - for (var i = 0; i < bigmacs; ++i) {
+        img(src='https://emojipedia-us.s3.amazonaws.com/cache/02/84/028407e00c727809da97d73e57db8e8a.png').burger
+      - }

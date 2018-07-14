@@ -1,0 +1,24 @@
+*
+{
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  color: pink;
+}
+
+a
+{
+  text-decoration-skip: ink;
+}
+
+.loadsa-burgers
+{
+}
+
+.burger
+{
+  width: 32px;
+  color: pink;
+}

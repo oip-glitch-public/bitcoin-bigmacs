@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    - if (title != '')
+      title #{title} - Important Bitcoin Information
+    - else
+      title Important Bitcoin Information
+    meta(name="description", content="How many Big Macs can you buy with 1 Bitcoin?")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/style.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Roboto", rel="stylesheet", type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Lato", rel="stylesheet", type="text/css")
+  body.font-roboto
+
+    //-nav.navbar.navbar-default.navbar-static-top(role="navigation")
+      a.navbar-brand.font-lato(href='/') 
+        span.glyphicon.glyphicon-bitcoin
+        |  How many Big Macs can you buy with 1 bitcoin?
+      //-p.navbar-text.strapline.hidden-xs Enhancements for Gods Jukebox
+      .navbar-text.navbar-right.sharing
+        .addthis_inline_share_toolbox
+
+    .container
+
+      block content
+        
+      block footer
+        hr
+        //p Buy me a Big Mac by sending Bitcoin here:
+          |
+          code 1E4SPmZz3yVChYuFCMvfmAca5KTaxYK1Cc
+        p Buy me a Big Mac by sending Bitcoin here:
+        div
+          a(class="donate-with-crypto", href="https://commerce.coinbase.com/checkout/6941dfef-b135-4662-a1e1-4b123a4dfcca")
+            Buy me a Big Mac
+          script(src="https://commerce.coinbase.com/v1/checkout.js")
+        hr
+        p Bitcoin prices are from #[a(href='http://www.coindesk.com/',target='_blank') Coindesk] and are updated every 5 minutes.
+      //-
+        hr        
+        h2 Support        
+        p Provided "as is". Made by #[a(href="http://www.sharpshooter.org/") Derek Ahmedzai] - email me at #[a(href="mailto:derek@sharpshooter.org?subject=gods-jukebox") derek@sharpshooter.org] if you have any questions.
+      
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="/client.js")
+    
+    block scripts
+
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-151636-40']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +'.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+
+    //- addthis
+      script(type="text/javascript", src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587ccc2af7b125ca", async="async")
+
+  //
+    | I'll write a proper 'how I made this' post later, but for now, here's a quick list of the ingredients:
+    | - nodejs (glitch, nodejs, coindesk, coinbase commerce)
