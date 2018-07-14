@@ -7,7 +7,7 @@
   "description": "How many Big Macs can you buy with 1 Bitcoin?",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js -p 8080"
   },
   "dependencies": {
     "express": "^4.15.3",
