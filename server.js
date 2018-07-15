@@ -119,7 +119,7 @@ function tweet_latest_price(){
     direction = ' ⬇🍔';
   }
   last_bigmacs_available = bigmacs_available;
-  let tweet = 'You can buy ' + bigmacs_available + ' Big Macs with 1 Bitcoin' + direction;
+  let tweet = 'You can buy ' + bigmacs_available + ' Big Macs (£' + bigmac_gbp + ') with 1 Bitcoin' + direction;
   T.post('statuses/update', {
     status: tweet
   }, function(err, data, response) {
