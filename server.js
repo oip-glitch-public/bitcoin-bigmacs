@@ -71,7 +71,7 @@ function get_bitcoin_price(){
 // get bigmac price
 // https://fastfoodprice.co.uk/mcdonalds-prices/
   function get_bigmac_price(){
-  let bigmac_gbp = 2.99;
+  let bigmac_gbp = 3.19;
   return bigmac_gbp;
 }
 
